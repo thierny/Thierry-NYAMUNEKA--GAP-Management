@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "f23c9411-9b9e-481d-a15a-fd65f6c196f3",
+		"name": "Thierry Gap Management Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23715327"
+	},
+	"item": [
+		{
+			"name": "Post Gap",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"gap_name\": \"Thierry Nyamuneka\",\n    \"gap_weight\": 20,\n    \"gap_score\": 100,\n    \"picture_text\": \"Describe how pictures will be taken\",\n    \"sections\": [\n        {\n            \"section_name\": \"Q 2.8.1. LOOK: At the colour of the coffee tree leaves. Are the leaves dark green or are some leaves yellow, pale green, or brown?\",\n            \"questions\": [\n                {\n                    \"question\": \"Nearly all leaves are dark green and less than 5% (less than 5 in 100) are yellow, pale green, or brown.\",\n                    \"description\": \"de\",\n                    \"question_type\": \"yes_no\",\n                    \"weight\": 10,\n                    \"answers\": [],\n                    \"is_not_applicable\": false\n                }\n            ]\n        },\n        {\n            \"section_name\": \" LOOK: Which pruning method(s) have been used on the majority of trees?\",\n            \"questions\": [\n                {\n                    \"question\": \"Quality of tools&materials used in pruning \",\n                    \"description\": \"de\",\n                    \"question_type\": \"multiple_single\",\n                    \"weight\": 20,\n                    \"answers\": [\n                        {\n                            \"answer\": \"If Conventional tools: Pruning shear/secateur&Saw\",\n                            \"description\": \"de\",\n                            \"weight\": 15,\n                            \"is_not_applicable\": false\n                        },\n                        {\n                            \"answer\": \" If Non conventional tools \",\n                            \"description\": \"de\",\n                            \"weight\": 5,\n                            \"is_not_applicable\": false\n                        },\n                        {\n                            \"answer\": \"Cleaning of pruning tools to avoid the spread of diseases between trees\",\n                            \"description\": \"de\",\n                            \"weight\": 5,\n                            \"is_not_applicable\": false\n                        }\n                    ],\n                    \"is_not_applicable\": false\n                }\n            ]\n        },\n        {\n            \"section_name\": \"This is a section name\",\n            \"questions\": [\n                {\n                    \"question\": \"This is the question to be asked\",\n                    \"description\": \"Marks Input\",\n                    \"question_type\": \"mark_input\",\n                    \"weight\": 20,\n                    \"answers\": [],\n                    \"is_not_applicable\": false\n                }\n            ]\n        },\n        {\n            \"section_name\": \"This is a section name\",\n            \"questions\": [\n                {\n                    \"question\": \"This is the question to be asked\",\n                    \"description\": \"Marks Input\",\n                    \"question_type\": \"multiple_apply\",\n                    \"weight\": 20,\n                    \"answers\": [\n                        {\n                            \"answer\": \"This is an answer\",\n                            \"description\": \"Answer Description\",\n                            \"weight\": 5,\n                            \"is_not_applicable\": false\n                        },\n                        {\n                            \"answer\": \"This is an answer\",\n                            \"description\": \"Answer Description\",\n                            \"weight\": 5,\n                            \"is_not_applicable\": false\n                        },\n                        {\n                            \"answer\": \"This is an answer\",\n                            \"description\": \"Answer Description\",\n                            \"weight\": 5,\n                            \"is_not_applicable\": false\n                        },\n                        {\n                            \"answer\": \"This is an answer\",\n                            \"description\": \"Answer Description\",\n                            \"weight\": 0,\n                            \"is_not_applicable\": false\n                        }\n                    ],\n                    \"is_not_applicable\": false\n                }\n            ]\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://staging.smartkungahara.rw/core/api/v1.1/gaps",
+					"protocol": "https",
+					"host": [
+						"staging",
+						"smartkungahara",
+						"rw"
+					],
+					"path": [
+						"core",
+						"api",
+						"v1.1",
+						"gaps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Gaps",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://staging.smartkungahara.rw/core/api/v1.1/gaps",
+					"protocol": "https",
+					"host": [
+						"staging",
+						"smartkungahara",
+						"rw"
+					],
+					"path": [
+						"core",
+						"api",
+						"v1.1",
+						"gaps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Gap",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"gap_name\": \"Thierry Nyamuneka - Update Gap (There is no API for updating)\",\n    \"_id\":\"635fc875dfb31d31f198b210\", // You should allow id/_id to update a single Gap data\n    \"status\":\"inactive\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://staging.smartkungahara.rw/core/api/v1.1/gaps",
+					"protocol": "https",
+					"host": [
+						"staging",
+						"smartkungahara",
+						"rw"
+					],
+					"path": [
+						"core",
+						"api",
+						"v1.1",
+						"gaps"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNTdkNzRkNDM5OGViMDA2ODEzNGY4NSIsImlhdCI6MTY2NzIyMDcyOCwiZXhwIjoxNjY3MjYzOTI4fQ.oTEVk9v85T_l8_QbwsU6ToaB4Wq3nBAlRA5ytcl1v1s",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
